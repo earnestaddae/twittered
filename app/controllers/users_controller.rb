@@ -62,7 +62,7 @@ class UsersController < ApplicationController
 
     def correct_user
       @user = User.find(params[:id])
-      flash[:danger] = "You can only edit your own profile"
+      # flash[:danger] = "You can only edit your own profile"
       redirect_to root_url unless current_user? @user
     end
 
